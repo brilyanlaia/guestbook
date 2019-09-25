@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Event</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-text>
+    <h1>Create New Event</h1>
+  </ion-text>
+    <form>
+        <ion-item>
+          <ion-label position="floating">Event Name</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+     
+        <ion-item>
+          <ion-label position="floating">Lokasi Event</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Tanggal Event</ion-label>
+            <ion-datetime displayFormat="MM DD YY"></ion-datetime>
+          </ion-item>
+
+          <ion-item>
+              <ion-label position="floating">Waktu Event</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          <ion-item>
+              <ion-label position="floating">Jumlah Meja</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          <ion-item>
+              <ion-label position="floating">Jumlah Kursi</ion-label>
+              <ion-input type="number"></ion-input>
+            </ion-item>
+        <hr>
+        <ion-button expand="full" routerLink="/home" routerDirection="forward">
+          <ion-ripple-effect></ion-ripple-effect>
+          Save
+        </ion-button>
+        
+      </form>
+
+</ion-content>

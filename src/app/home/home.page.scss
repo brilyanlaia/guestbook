@@ -2,3 +2,50 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+.home-card{
+  height: 20vh;
+}
+
+ion-icon{
+  font-size: 60px;
+}
+
+ion-header{
+  --background: #1d1b26
+}
+
+ion-toolbar{
+  --background: #1d1b26
+}
+
+ion-content{
+  --background: #1d1b26
+}
+
+ion-title{
+  --color: white;
+}
+
+ion-text{
+  --color: white;
+  h1{
+      color:white
+  }
+}
+
+
+
+ion-item{
+  --background: #1d1b26;
+
+  ion-label{
+      --color: white;
+  }
+  
+}
+
+ion-button{
+  --background:#ba2f6d;
+  --color:white;
+}
