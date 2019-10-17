@@ -1,71 +1,88 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      Home
+      Guestbook
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-grid>
+<ion-content padding>
+
+  <ion-text><h1>Shortcut</h1></ion-text>
+
+  <ion-list lines="none">
+    <ion-item class="home-card" routerLink="/event" detail> 
+                <ion-icon name="add-circle" slot="start" size="small"></ion-icon>
+                <ion-label>Create New Event</ion-label>
+    </ion-item>
+    <ion-item class="home-card" routerLink="/event-list" detail> 
+                <ion-icon name="list" slot="start" size="small"></ion-icon>
+                <ion-label>List Event</ion-label>
+    </ion-item>
+    <ion-item class="home-card" routerLink="/customer-list" detail> 
+                <ion-icon name="people" slot="start" size="small"></ion-icon>
+                <ion-label>Customer</ion-label>
+    </ion-item>
+    <ion-item class="home-card" routerLink="/admin-list" detail> 
+      <ion-icon name="person" slot="start" size="small"></ion-icon>
+      <ion-label>Admin</ion-label>
+    </ion-item>
+    <ion-item class="home-card" routerLink="/customer-create" detail> 
+                <ion-icon name="person-add" slot="start" size="small"></ion-icon>
+                <ion-label>Add New Customer</ion-label>
+    </ion-item>
+    <ion-item class="home-card" routerLink="/admin-create" detail> 
+                <ion-icon name="person-add" slot="start" size="small"></ion-icon>
+                <ion-label>Add New Admin</ion-label>
+    </ion-item>
+   
+  </ion-list>
+
+   <!--  <ion-grid>
       <ion-row>
         <ion-col size="6">
           <ion-card class="home-card" routerLink="/event" text-center>
              
-               <div class="ion-text-center">
-
-                  <ion-icon name="create"></ion-icon>
-               </div>
+              
                 <ion-card-content>
                  <ion-text>
-                   Create Event
+                   CREATE EVENT
                  </ion-text>
                 </ion-card-content>
                
           </ion-card>
         </ion-col>
         <ion-col size="6">
-          <ion-card class="home-card" text-center>
-              <div class="ion-text-center">
-
-                  <div class="ion-text-center">
-
-                      <ion-icon name="settings"></ion-icon>
-                   </div>
-               </div>
+          <ion-card class="home-card" routerLink="/event-list" text-center>
+           
                 <ion-card-content>
-                  <ion-text>Admin</ion-text>
+                  <ion-text>Event List</ion-text>
                 </ion-card-content>
             </ion-card>
-        </ion-col>
+      </ion-col>
+       
       </ion-row>
       <ion-row>
+          <ion-col size="6">
+              <ion-card class="home-card" routerLink="/admin-list" text-center>
+           
+                    <ion-card-content>
+                      <ion-text>Admin</ion-text>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
         <ion-col size="6">
-            <ion-card class="home-card" text-center>
-                <div class="ion-text-center">
-
-                    <ion-icon name="create"></ion-icon>
-                 </div>
+            <ion-card class="home-card" routerLink="/customer-list" text-center>
                   <ion-card-content>
                     <ion-text>Customer</ion-text>
                   </ion-card-content>
               </ion-card>
         </ion-col>
-        <ion-col size="6">
-            <ion-card class="home-card" text-center>
-                <div class="ion-text-center">
-
-                    <ion-icon name="create"></ion-icon>
-                 </div>
-                  <ion-card-content>
-                    <ion-text>asd Page</ion-text>
-                  </ion-card-content>
-              </ion-card>
-        </ion-col>
+       
 
       </ion-row>
-    </ion-grid>
+    </ion-grid> -->
 </ion-content>

@@ -17,6 +17,15 @@ export class ApiService {
     
   }
 
+  setUrl(path: string){
+    environment.api_url = null
+    environment.api_url = path
+  }
+  
+  getUrl(){
+    return environment.api_url;
+  }
+
   getData(
     path: string
   ): Observable<any> {
@@ -33,6 +42,23 @@ export class ApiService {
     );
   }
 
+  postData(
+    path: string,
+    model: string
+  ): Observable<any> {
+    
+    let body = model;
+    let timer: number = 3000;
 
+    return this.http.post(environment.api_url + path, body).pipe(
+      catchError(err => {
+        return throwError(err);
+      }),
+      map((res: Response) => {
+        return res;
+      }),
+      timeout(timer)
+    );
+  }
 
 }

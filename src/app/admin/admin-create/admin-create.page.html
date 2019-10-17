@@ -1,0 +1,39 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Admin</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-text color="primary">
+    <h4>Create New Admin</h4>
+  </ion-text>
+    <form [formGroup]="adminForm" style="margin-top:20px;">
+        <ion-item>
+          <ion-label position="floating">Username</ion-label>
+          <ion-input formControlName="nama" type="text"></ion-input>
+        </ion-item>
+     
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input formControlName="email" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input formControlName="password" type="password"></ion-input>
+          </ion-item>
+
+        <hr>
+        <ion-button expand="full" [disabled]="adminForm.invalid" (click)="save()" style="margin-top:20px;">
+          <ion-ripple-effect></ion-ripple-effect>
+          Save
+        </ion-button>
+        
+      </form>
+
+</ion-content>

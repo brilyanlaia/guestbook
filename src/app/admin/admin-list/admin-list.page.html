@@ -1,11 +1,26 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
-    <ion-title>admin-list</ion-title>
+    <ion-title>Admin</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-  <ion-item *ngFor="let admin of admins">{{admin.nama}}</ion-item>
+  
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Admins</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let admin of admins" [routerLink]="['/admin-detail',admin.ID_A]" detail>{{admin.nama}}</ion-item>
+  </ion-list>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+    <ion-fab-button routerLink="/admin-create">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

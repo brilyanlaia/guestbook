@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Customer</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-text color="primary">
+        <h4>Customer List</h4>
+      </ion-text>
+    <ion-list>
+     
+      <ion-item *ngFor="let c of customers" [routerLink]="['/customer-detail',c.ID_P]" detail>{{c.nama}}</ion-item>
+    </ion-list>
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+      <ion-fab-button routerLink="/customer-create">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+  </ion-content>

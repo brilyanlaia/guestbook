@@ -24,5 +24,70 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Karla:700&display=swap');
+
+ion-menu-button{
+  --color: black;
+}
+ion-toolbar{
+  --background: white;
+  border: none;
+  box-shadow: none;
+}
+ion-title{
+   --color: black;
+   
+   font-family: 'Karla', sans-serif;
+}
 
 
+ion-icon{
+  --color: black;
+}
+
+ion-text{
+  font-family: 'Karla', sans-serif;
+}
+
+ion-label{
+  font-family: 'Karla', sans-serif;
+}
+
+ion-button{
+  font-family: 'Karla', sans-serif;
+}
+
+/* ion-header{
+    --background: #1d1b26
+  }
+  
+  ion-toolbar{
+    --background: #1d1b26
+  }
+  
+  ion-content{
+    --background: #1d1b26
+  }
+  
+  ion-title{
+    --color: white;
+  }
+
+    ion-list{
+       background-color: #1d1b26
+    }
+    ion-list-header{
+        background-color: #1d1b26;
+        color: white;
+    }
+
+    ion-item{
+        --background: #1d1b26;
+        --color: white
+       
+    }
+    ion-text{
+        
+        --background: #1d1b26
+    } */

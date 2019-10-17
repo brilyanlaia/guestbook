@@ -1,0 +1,34 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Setting</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-text>
+    <h2>Set Server Path</h2>
+  </ion-text>
+
+  <form [formGroup]="fg">
+      <ion-item>
+          <ion-label position="floating">Server Path</ion-label>
+          <ion-input type="text" formControlName="path" placeholder="http://192.168.0.12/tematik/tematik/"></ion-input>
+       
+        </ion-item>
+
+       <div text-right style="margin-top: 10px;">
+
+     
+            <ion-button slot="start" fill="outline" routerLink="/home">cancel</ion-button>
+            <ion-button slot="end" (click)="save()" [disabled]="fg.invalid">Save</ion-button>
+          </div>
+       
+  </form>
+
+
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Event</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="Pull to refresh"
+          refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher>
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Event List</ion-label>
+      </ion-list-header>
+      <ion-item *ngIf="!events">No event yet.</ion-item>
+      <ion-item *ngFor="let e of events" [routerLink]="['/event-detail',e.ID_E]" detail>{{e.nama_e}}</ion-item>
+    </ion-list>
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+      <ion-fab-button routerLink="/event">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+  </ion-content>

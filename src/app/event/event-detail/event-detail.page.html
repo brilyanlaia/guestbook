@@ -1,0 +1,29 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Event Detail</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-text color="primary">
+    <h1 class="event-title"><strong>{{event.nama_e}}</strong></h1>
+  </ion-text>
+
+  <ion-list>
+      <ion-text><h5>Lokasi: {{event.lokasi}}</h5></ion-text>
+      <ion-text>
+        <h5 >Tanggal: {{tanggal}}</h5>
+      </ion-text>
+      <ion-text>
+          <h5 >Waktu: {{event.waktu_e}}</h5></ion-text>
+       
+      <ion-text><h5>Jumlah Meja: {{event.jumlah_m}}</h5></ion-text>
+      <ion-text><h5>Jumlah Kursi: {{event.jumlah_k}}</h5></ion-text>
+  </ion-list>
+ 
+
+</ion-content>

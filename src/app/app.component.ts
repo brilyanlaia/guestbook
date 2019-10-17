@@ -17,9 +17,19 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
+      title: 'Event',
+      url: '/event-list',
       icon: 'list'
+    },
+    {
+      title: 'Setting',
+      url: '/setting',
+      icon: 'settings'
+    },
+    {
+      title: 'Logout',
+      url: '/login',
+      icon: 'log-out'
     }
   ];
 

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header no-border>
   <ion-toolbar>
     <ion-title>Event</ion-title>
     <ion-buttons slot="start">
@@ -12,36 +12,37 @@
   <ion-text>
     <h1>Create New Event</h1>
   </ion-text>
-    <form>
+
+    <form [formGroup]="fg">
         <ion-item>
           <ion-label position="floating">Event Name</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" formControlName="nama_e"></ion-input>
         </ion-item>
      
         <ion-item>
           <ion-label position="floating">Lokasi Event</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" formControlName="lokasi_e"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label position="floating">Tanggal Event</ion-label>
-            <ion-datetime displayFormat="MM DD YY"></ion-datetime>
+            <ion-datetime displayFormat="DD MM YYYY" formControlName="tanggal_e"></ion-datetime>
           </ion-item>
 
           <ion-item>
               <ion-label position="floating">Waktu Event</ion-label>
-              <ion-input type="text"></ion-input>
-            </ion-item>
+              <ion-datetime displayFormat="Pukul HH : mm" formControlName="waktu_e"></ion-datetime>
+             </ion-item>
           <ion-item>
               <ion-label position="floating">Jumlah Meja</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" formControlName="jumlah_m"></ion-input>
             </ion-item>
           <ion-item>
               <ion-label position="floating">Jumlah Kursi</ion-label>
-              <ion-input type="number"></ion-input>
+              <ion-input type="number" formControlName="jumlah_k"></ion-input>
             </ion-item>
         <hr>
-        <ion-button expand="full" routerLink="/home" routerDirection="forward">
+        <ion-button expand="full" (click)="save()" [disabled]="fg.invalid">
           <ion-ripple-effect></ion-ripple-effect>
           Save
         </ion-button>

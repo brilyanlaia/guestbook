@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Customer</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-text color="primary">
+        <h4>Add New Customer</h4>
+      </ion-text>
+        <form [formGroup]="customer">
+            <ion-item>
+              <ion-label position="floating">Nama</ion-label>
+              <ion-input formControlName="nama" type="text"></ion-input>
+            </ion-item>
+         
+            <ion-item>
+              <ion-label position="floating">Nomor HP</ion-label>
+              <ion-input formControlName="nomorhp" type="number"></ion-input>
+            </ion-item>
+         
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input formControlName="email" type="text"></ion-input>
+            </ion-item>
+
+         
+            <hr>
+            <ion-button expand="full"  (click)="save()">
+              <ion-ripple-effect></ion-ripple-effect>
+              Save
+            </ion-button>
+            
+          </form>
+</ion-content>

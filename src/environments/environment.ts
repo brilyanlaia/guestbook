@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api_url: "http://localhost/tematik/api/",
+  api_url: "http://",
+ // api_url: "http://localhost/tematik/tematik/",
 };
 
 /*

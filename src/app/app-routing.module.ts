@@ -17,7 +17,16 @@ const routes: Routes = [
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'event', loadChildren: './event/event.module#EventPageModule' },
-  { path: 'admin-list', loadChildren: './admin/admin-list/admin-list.module#AdminListPageModule' }
+  { path: 'admin-list', loadChildren: './admin/admin-list/admin-list.module#AdminListPageModule' },
+  { path: 'admin-create', loadChildren: './admin/admin-create/admin-create.module#AdminCreatePageModule' },
+  { path: 'event-list', loadChildren: './event/event-list/event-list.module#EventListPageModule' },
+  { path: 'event-detail/:id', loadChildren: './event/event-detail/event-detail.module#EventDetailPageModule' },
+  { path: 'event-create', loadChildren: './event/event-create/event-create.module#EventCreatePageModule' },
+  { path: 'customer-list', loadChildren: './customer/customer-list/customer-list.module#CustomerListPageModule' },
+  { path: 'customer-create', loadChildren: './customer/customer-create/customer-create.module#CustomerCreatePageModule' },
+  { path: 'customer-detail/:id', loadChildren: './customer/customer-detail/customer-detail.module#CustomerDetailPageModule' },
+  { path: 'admin-detail/:id', loadChildren: './admin/admin-detail/admin-detail.module#AdminDetailPageModule' },
+  { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' }
 ];
 
 @NgModule({
