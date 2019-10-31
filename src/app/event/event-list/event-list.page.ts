@@ -41,6 +41,7 @@ export class EventListPage implements OnInit {
   
   getPath(){
     this.url = this.as.getUrl()
+    this.toast.presentToast('Connected to ',this.url)
   }
 
 
@@ -59,6 +60,11 @@ export class EventListPage implements OnInit {
       console.log('res -->',res)
       this.events = res.records;
       console.log('admins -->',this.events)
+      this.ls.dismiss()
+    },
+    err =>{
+      console.log("err",err)
+      this.toast.presentToast("error",err)
       this.ls.dismiss()
     })
   }

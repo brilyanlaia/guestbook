@@ -51,6 +51,7 @@ export class EventPage implements OnInit {
       waktu_e: new FormControl("",Validators.required),
       jumlah_m: new FormControl("",Validators.required),
       jumlah_k: new FormControl("",Validators.required),
+      note: new FormControl(""),
     })
   }
 
@@ -63,7 +64,8 @@ export class EventPage implements OnInit {
       tanggal_e: moment(this.fg.value.tanggal_e).format("YYYY-MM-DD"),
       waktu_e: moment(this.fg.value.waktu_e).format("hh:mm:ss"),
       jumlah_m: this.fg.value.jumlah_m,
-      jumlah_k: this.fg.value.jumlah_k
+      jumlah_k: this.fg.value.jumlah_k,
+      note: this.fg.value.note
     }
 
   //  let date = moment(this.fg.value.tanggal_e).format("YYYY-MM-DD")

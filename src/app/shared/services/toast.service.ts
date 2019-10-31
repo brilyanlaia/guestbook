@@ -8,9 +8,9 @@ export class ToastService {
 
   constructor(public toastController:ToastController) {}
 
-  async presentToast(message: string) {
+  async presentToast(message: string, val="") {
     const toast = await this.toastController.create({
-      message: message,
+      message: message+val,
       duration: 2000
     });
     toast.present();
