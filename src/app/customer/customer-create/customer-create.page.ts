@@ -31,6 +31,7 @@ export class CustomerCreatePage implements OnInit {
   initForm(){
     this.customer = new FormGroup ({
       nama: new FormControl("",Validators.required),
+      nickname: new FormControl("",Validators.required),
       email: new FormControl("",Validators.required),
       nomorhp: new FormControl("",Validators.required),
       kehadiran: new FormControl("xax",Validators.required),
