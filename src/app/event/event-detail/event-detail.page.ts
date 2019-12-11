@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/shared/services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
 import { Events } from 'src/app/shared/models/event'
 @Component({
@@ -15,7 +15,7 @@ export class EventDetailPage implements OnInit {
   tanggal: any;
   jam: any;
 
-  constructor(private api: ApiService, private route: ActivatedRoute) { }
+  constructor(private api: ApiService, private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit() {
     this.getData()
@@ -44,6 +44,11 @@ export class EventDetailPage implements OnInit {
     })
     })
 
+  }
+
+  goToTable(id){
+    this.router.navigate(['table-detail',id])
+    console.log("move to event table id ",id)
   }
 
 

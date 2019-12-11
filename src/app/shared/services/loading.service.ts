@@ -5,23 +5,27 @@ import { LoadingController } from '@ionic/angular';
   providedIn: 'root'
 })
 export class LoadingService {
-
+  isLoading: boolean
   constructor(private loadingController: LoadingController) { }
 
 
   async presentLoading() {
-    const loading = await this.loadingController.create({
-      message: 'Loading',
-      duration: 2000
+    this.isLoading = true;
+    return await this.loadingController.create({
+      spinner: "dots"
+      
+    }).then(a => {
+      a.present().then(() => {
+        console.log('presented');
+        if (!this.isLoading) {
+          a.dismiss().then(() => console.log('abort presenting'));
+        }
+      });
     });
-    await loading.present();
-
-    const { role, data } = await loading.onDidDismiss();
-
-    console.log('Loading dismissed!');
   }
 
-  dismiss(){
-    this.loadingController.dismiss();
+  async dismiss() {
+    this.isLoading = false;
+    return await this.loadingController.dismiss().then(() => console.log('dismissed'));
   }
 }

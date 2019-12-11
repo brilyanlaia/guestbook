@@ -34,8 +34,9 @@ export class CustomerCreatePage implements OnInit {
       nickname: new FormControl("",Validators.required),
       email: new FormControl("",Validators.required),
       nomorhp: new FormControl("",Validators.required),
-      kehadiran: new FormControl("xax",Validators.required),
-      password: new FormControl("",Validators.required)
+      createdby: new FormControl("admin",Validators.required),
+      modifiedby: new FormControl("",Validators.required)
+     
     })
   }
 

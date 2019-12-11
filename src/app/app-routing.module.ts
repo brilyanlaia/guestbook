@@ -26,7 +26,11 @@ const routes: Routes = [
   { path: 'customer-create', loadChildren: './customer/customer-create/customer-create.module#CustomerCreatePageModule' },
   { path: 'customer-detail/:id', loadChildren: './customer/customer-detail/customer-detail.module#CustomerDetailPageModule' },
   { path: 'admin-detail/:id', loadChildren: './admin/admin-detail/admin-detail.module#AdminDetailPageModule' },
-  { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' }
+  { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' },
+  { path: 'table-detail/:id', loadChildren: './event/table-detail/table-detail.module#TableDetailPageModule' },
+  { path: 'kursi-list/:id', loadChildren: './event/kursi-list/kursi-list.module#KursiListPageModule' }
+
+
 ];
 
 @NgModule({

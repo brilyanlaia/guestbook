@@ -50,13 +50,14 @@ export class AdminCreatePage implements OnInit {
     this.adminForm = new FormGroup ({
       nama: new FormControl("",Validators.required),
       email: new FormControl("",Validators.required),
-      password: new FormControl("",Validators.required)
+      password: new FormControl("",Validators.required),
+      createdby: new FormControl("superadmin",Validators.required)
     })
   }
 
 
   save(){
-    let body = this.adminForm.getRawValue();
+    let body = this.adminForm.value
     let shit = JSON.stringify(body);
     console.log("shit",shit)
     console.log("sending this shit -->",body)

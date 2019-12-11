@@ -29,7 +29,8 @@ export class EventCreatePage implements OnInit {
       tanggal_e: new FormControl("",Validators.required),
       waktu_e: new FormControl("",Validators.required),
       jumlah_m: new FormControl("",Validators.required),
-      jumlah_k: new FormControl("",Validators.required),
+      createdby: new FormControl("admin",Validators.required)
+     
     })
   }
 

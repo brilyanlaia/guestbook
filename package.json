@@ -28,9 +28,10 @@
     "@ionic/pro": "2.0.4",
     "@ionic/storage": "^2.2.0",
     "call-number": "1.0.1",
-    "cordova-android": "8.1.0",
+    "cordova-android": "^7.1.2",
     "core-js": "^2.5.4",
     "moment": "^2.24.0",
+    "mx.ferreyra.callnumber": "0.0.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -78,7 +79,8 @@
       "cordova-plugin-ionic-webview": {
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
-      "cordova-plugin-ionic-keyboard": {}
+      "cordova-plugin-ionic-keyboard": {},
+      "call-number": {}
     },
     "platforms": [
       "android"

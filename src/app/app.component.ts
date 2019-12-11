@@ -29,7 +29,8 @@ export class AppComponent {
     {
       title: 'Logout',
       url: '/login',
-      icon: 'log-out'
+      icon: 'log-out',
+      click: 'logout()'
     }
   ];
 
@@ -46,5 +47,10 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  
+  logout(){
+    console.log("logout")
+    localStorage.setItem('isLogin',"false");
   }
 }

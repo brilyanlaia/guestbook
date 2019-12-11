@@ -21,7 +21,9 @@
       <ion-text>
           <h5 >Waktu: {{event.waktu_e}}</h5></ion-text>
        
-      <ion-text><h5>Jumlah Meja: {{event.jumlah_m}}</h5></ion-text>
+      <ion-text><h5>Jumlah Meja: {{event.jumlah_m}}</h5> <ion-button (click)="goToTable(event.ID_E)">
+        Edit Table
+      </ion-button></ion-text>
       <ion-text><h5>Jumlah Kursi: {{event.jumlah_k}}</h5></ion-text>
       <ion-text><h5>Catatan:</h5></ion-text>
       <ion-text><p>{{event.note}}</p></ion-text>

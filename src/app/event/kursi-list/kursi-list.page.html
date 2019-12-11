@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/event-list"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chair for Table #{{id}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-text>Populate Chair</ion-text><br><br>
+  <ion-chip>
+      <ion-label color="success" (click)="addOne()">+1</ion-label>
+    </ion-chip>
+  <ion-chip>
+      <ion-label color="success" (click)="addFive()">+5</ion-label>
+    </ion-chip>
+    
+  <ion-chip>
+      <ion-label color="success" (click)="addTen()">+10</ion-label>
+    </ion-chip>
+    
+
+</ion-content>

@@ -27,7 +27,7 @@ export class ApiService {
   }
 
   getData(
-    path: string
+    path: string,
   ): Observable<any> {
    
     return this.http.get(`${environment.api_url}${path}`).pipe(
@@ -48,7 +48,7 @@ export class ApiService {
   ): Observable<any> {
     
     let body = model;
-    let timer: number = 3000;
+    let timer: number = 10000;
 
     return this.http.post(environment.api_url + path, body).pipe(
       catchError(err => {
