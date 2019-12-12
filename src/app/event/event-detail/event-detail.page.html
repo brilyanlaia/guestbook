@@ -19,14 +19,21 @@
         <h5 >Tanggal: {{tanggal}}</h5>
       </ion-text>
       <ion-text>
-          <h5 >Waktu: {{event.waktu_e}}</h5></ion-text>
+          <h5 >Waktu: {{jam}}</h5></ion-text>
        
-      <ion-text><h5>Jumlah Meja: {{event.jumlah_m}}</h5> <ion-button (click)="goToTable(event.ID_E)">
+      <ion-text><h5>Jumlah Meja: {{event.jumlah_m}}</h5> </ion-text>
+     <!--  <ion-text><h5>Jumlah Kursi: {{event.jumlah_k}}</h5></ion-text> -->
+     <ion-button (click)="goToTable(event.ID_E)">
         Edit Table
-      </ion-button></ion-text>
-      <ion-text><h5>Jumlah Kursi: {{event.jumlah_k}}</h5></ion-text>
-      <ion-text><h5>Catatan:</h5></ion-text>
-      <ion-text><p>{{event.note}}</p></ion-text>
+      </ion-button>
+     <ion-button (click)="goToCheck(event.ID_E)">
+        Guest Check In
+      </ion-button>
+      <ion-button (click)="random(event.ID_E)">
+        Random Raffle
+      </ion-button>
+     <ion-text><h5>Catatan:</h5></ion-text>
+      <ion-text><p>{{event.notes}}</p></ion-text>
   </ion-list>
  
 

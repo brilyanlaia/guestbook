@@ -21,11 +21,17 @@ export class EventPage implements OnInit {
   newEvent = []
   table= []
 
+  admin;
+
   pageTitle = 'Create New Event'
 
   constructor(private api: ApiService,
      private loading: LoadingService, 
-     private toast:ToastService, private router: Router) { }
+     private toast:ToastService, private router: Router) { 
+
+      this.admin = localStorage.getItem("current")
+
+     }
 
   ngOnInit() {
     this.initFormMeja()
@@ -61,7 +67,7 @@ export class EventPage implements OnInit {
       tanggal_e: new FormControl("",Validators.required),
       waktu_e: new FormControl("",Validators.required),
       jumlah_m: new FormControl("",Validators.required),
-      createdby: new FormControl("admin",Validators.required),
+      createdby: new FormControl(this.admin,Validators.required),
       notes: new FormControl("",Validators.required)
      
     })
@@ -120,14 +126,14 @@ export class EventPage implements OnInit {
       console.log("res -->",res)
       this.loading.dismiss();
 
-      //this.router.navigateByUrl('/event-list')
-
       this.toast.presentToast('Event berhasil dibuat')
-      this.pageTitle = 'Enter table details for ' + eventname
-      this.step2 = true;
-      this.step1 = false;
+      this.router.navigateByUrl('/event-list')
+
+     // this.pageTitle = 'Enter table details for ' + eventname
+      //this.step2 = true;
+      //this.step1 = false;
    
-      this.getEvent()
+      //this.getEvent()
 
     },err => {
       console.log("error",err)

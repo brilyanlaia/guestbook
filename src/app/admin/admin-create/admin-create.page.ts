@@ -51,7 +51,8 @@ export class AdminCreatePage implements OnInit {
       nama: new FormControl("",Validators.required),
       email: new FormControl("",Validators.required),
       password: new FormControl("",Validators.required),
-      createdby: new FormControl("superadmin",Validators.required)
+      createdby: new FormControl("superadmin",Validators.required),
+      modifiedby: new FormControl("")
     })
   }
 

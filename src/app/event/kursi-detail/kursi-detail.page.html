@@ -1,0 +1,25 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Edit Kursi #{{id}}</ion-title>
+  
+      <ion-buttons slot="end">
+        <ion-back-button icon="close"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label>Customer</ion-label>
+        <ionic-selectable
+        [(ngModel)]="current"
+        [items]="customers"
+        itemValueField="ID_P"
+        itemTextField="nama"
+        [canSearch]="true"
+        (onChange)="custChange($event)">
+      </ionic-selectable>
+      </ion-item>
+
+</ion-content>

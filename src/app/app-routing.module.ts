@@ -28,7 +28,13 @@ const routes: Routes = [
   { path: 'admin-detail/:id', loadChildren: './admin/admin-detail/admin-detail.module#AdminDetailPageModule' },
   { path: 'setting', loadChildren: './setting/setting.module#SettingPageModule' },
   { path: 'table-detail/:id', loadChildren: './event/table-detail/table-detail.module#TableDetailPageModule' },
-  { path: 'kursi-list/:id', loadChildren: './event/kursi-list/kursi-list.module#KursiListPageModule' }
+  { path: 'kursi-list/:id', loadChildren: './event/kursi-list/kursi-list.module#KursiListPageModule' },
+  { path: 'kursi-detail/:id', loadChildren: './event/kursi-detail/kursi-detail.module#KursiDetailPageModule' },
+  { path: 'check-in/:id', loadChildren: './event/check-in/check-in.module#CheckInPageModule' },
+  { path: 'random/:id', loadChildren: './event/random/random.module#RandomPageModule' }
+
+
+
 
 
 ];

@@ -10,6 +10,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CallNumber } from '@ionic-native/call-number/ngx';
+import { IonicSelectableModule } from 'ionic-selectable';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +19,8 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
     HttpClientModule,
     IonicModule.forRoot(),
     IonicStorageModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    IonicSelectableModule
   ],
   providers: [
     StatusBar,

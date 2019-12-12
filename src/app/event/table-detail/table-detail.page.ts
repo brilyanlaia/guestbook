@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/shared/services/api.service';
@@ -11,6 +11,7 @@ import { LoadingService } from 'src/app/shared/services/loading.service';
   styleUrls: ['./table-detail.page.scss'],
 })
 export class TableDetailPage implements OnInit {
+
  subs: Subscription
  id: any;
  fg2: FormGroup
@@ -19,6 +20,8 @@ export class TableDetailPage implements OnInit {
     this.subs = this.route.params.subscribe(res =>{
       this.id = res.id
     })
+
+   
    }
 
   ngOnInit() {
@@ -43,7 +46,12 @@ export class TableDetailPage implements OnInit {
   } 
 
   openKursi(val){
-    this.router.navigate(['kursi-list',val])
+    let navigationExtras: NavigationExtras = {
+      state: {
+        eventId: this.id
+      }
+    };
+    this.router.navigate(['kursi-list',val],navigationExtras)
   }
 
 

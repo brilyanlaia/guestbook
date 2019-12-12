@@ -1,0 +1,66 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title>Guest check in</ion-title>
+    <ion-buttons slot="end">
+        <ion-back-button icon="close"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-item>
+        <ion-label>Customer</ion-label>
+        <ionic-selectable
+        [(ngModel)]="current"
+        [items]="guestlist"
+        itemValueField="ID_P"
+        itemTextField="nama"
+        [canSearch]="true"
+        (onChange)="custChange($event)">
+      </ionic-selectable>
+      </ion-item>
+      
+      <div *ngIf="detailcust">
+        <h1>Selected Customer: </h1>
+        <p><strong>Mr/Mrs. {{detailcust.nama}}</strong></p>
+        <!-- <strong>Seating number</strong>: {{detailcust.ID_K}} <br> -->
+        <strong>Table</strong>: {{detailcust.tname}} <br>
+        <strong>Raffle Code</strong>: {{detailcust.raffle}}
+        <br><br>
+          <ion-button (click)="check()">
+            Check In
+          </ion-button>
+
+      </div>
+<div>
+    <ion-segment [(ngModel)]="segment" value="not">
+      <ion-segment-button value="not">
+        <ion-label>Not Yet Checked</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="checked">
+        <ion-label>Already Checked</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="segment">
+      <div *ngSwitchCase="'not'">
+
+    
+       <ion-list *ngFor="let a of guestbelum">
+         {{a.nama}}
+       </ion-list>
+      </div>
+      <div *ngSwitchCase="'checked'">
+        <ion-list *ngIf="guesthadir.length === 0">no customer check in yet.</ion-list>
+          <ion-list *ngFor="let a of guesthadir">
+              {{a.nama}}
+            </ion-list>
+     
+     
+       
+      </div>
+    
+      </div>
+  </div>
+</ion-content>

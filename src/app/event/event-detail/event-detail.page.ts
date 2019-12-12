@@ -13,7 +13,7 @@ export class EventDetailPage implements OnInit {
   event: Events[] = [];
 
   tanggal: any;
-  jam: any;
+  jam = "";
 
   constructor(private api: ApiService, private route: ActivatedRoute,private router: Router) { }
 
@@ -40,7 +40,8 @@ export class EventDetailPage implements OnInit {
       console.log("res event fetched-->",this.event)
 
       this.tanggal = moment(res.tanggal_e).format("DD MMMM YYYY");
-      this.jam = moment(res.waktu_e).format("hh:mm:ss")
+      this.jam = res.waktu_e.substring(0,5)
+      console.log("wakty",res.waktu_e)
     })
     })
 
@@ -49,6 +50,13 @@ export class EventDetailPage implements OnInit {
   goToTable(id){
     this.router.navigate(['table-detail',id])
     console.log("move to event table id ",id)
+  }
+
+  goToCheck(id){
+    this.router.navigate(['check-in',id])
+  }
+  random(id){
+    this.router.navigate(['random',id])
   }
 
 

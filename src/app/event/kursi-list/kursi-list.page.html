@@ -21,5 +21,15 @@
       <ion-label color="success" (click)="addTen()">+10</ion-label>
     </ion-chip>
     
+  <ion-grid padding>
+    <ion-row>
+      <ion-col *ngFor="let a of chair" size="4">
+        <div class="kursi" [ngClass]="{
+          'empty-chair': a.ID_P === '1'
+        }" (click)="edit(a.ID_k)">{{a.nama}}</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  
 </ion-content>

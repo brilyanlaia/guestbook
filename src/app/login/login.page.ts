@@ -41,11 +41,14 @@ export class LoginPage implements OnInit {
   login(){
     let body = this.fg.value
     this.loading.presentLoading()
-    console.log("send",body)
-    this.api.postData("admins/login.php",body).subscribe(res =>{
+    
+    let json = JSON.stringify(body)
+    console.log("send",json)
+    this.api.postData("admins/login.php",json).subscribe(res =>{
       console.log("login res",res)
-      if(res.message === 'success'){
+      if(res.message === 'Login Success'){
         localStorage.setItem("isLogin","true")
+        localStorage.setItem("current",this.fg.value.email)
         this.toast.presentToast('Login Success')
         this.router.navigate(['/home'])
         this.loading.dismiss()

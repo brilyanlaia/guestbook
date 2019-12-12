@@ -17,7 +17,7 @@ export class HomePage {
   localpath: string
 
   constructor(public actionSheetController: ActionSheetController,public loading: LoadingService,private storage:Storage,private menu: MenuController, private toast: ToastService, private api: ApiService, private router: Router) {
-    this.menu.enable(true);
+    this.menu.enable(false);
   }
 
   
